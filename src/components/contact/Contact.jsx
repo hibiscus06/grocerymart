@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <div className="parent flex">
+      <div className="parent flex flex-row items-center">
         <div className="w-1/2 details space-y-10 flex flex-col items-center">
           <div className="w-1/2 flex flex-col justify-center items-center">
             <div className="flex gap-3 justify-center items-center">
@@ -68,7 +68,7 @@ const Contact = () => {
                 placeholder="message"
               />
 
-              <button className=" text-white items-center border bg-red-500 rounded-md">
+              <button className=" text-white items-center border bg-red-500 rounded-md h-8">
                 Send Message
               </button>
             </div>

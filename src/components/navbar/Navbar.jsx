@@ -4,28 +4,35 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="w-full">
+    <div className="w-full font-serif">
       <div className="m-0 p-0 box-border bg-lime-700">
         <div className="navbar p-7 flex justify-evenly items-center h-[20vh] ">
-          <div className="w-1/2">
+          <div className="w-1/4">
             <input
-              className="h-10 w-[35vh] rounded-sm outline-none pl-4 focus:w-[45vh] focus:bg-lime-100"
+              className="h-10 rounded-sm outline-none pl-4 focus:w-[45vh] focus:bg-lime-100"
               type="text"
               name="search"
               placeholder="search"
             />
           </div>
-          <div className="logo w-1/2">
+          <div className="logo flex flex-col items-center">
             <Link to="/">
               <img src={logo} />
             </Link>
           </div>
-          <div className="w-1/6 space-x-20">
-            <i
-              class="fa-solid fa-basket-shopping fa-2xl"
-              style={{ color: "#ffffff" }}
-            ></i>
-            <i class="fa-solid fa-user fa-2xl" style={{ color: "#ffffff" }}></i>
+          <div className="w-1/6 flex flex-row justify-evenly">
+            <div>
+              <i
+                class="fa-solid fa-basket-shopping fa-2xl"
+                style={{ color: "#ffffff" }}
+              ></i>
+            </div>
+            <div>
+              <i
+                class="fa-solid fa-user fa-2xl"
+                style={{ color: "#ffffff" }}
+              ></i>
+            </div>
           </div>
         </div>
       </div>
