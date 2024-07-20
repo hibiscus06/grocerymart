@@ -7,6 +7,7 @@ import About from "./components/about/About.jsx";
 import Products from "./components/products/Products.jsx";
 import Blogs from "./components/blogs/Blogs.jsx";
 import Contact from "./components/contact/Contact.jsx";
+import ProductsCategory from "./components/products/ProductsCategory.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/product/:category",
+    element: <ProductsCategory />,
   },
 ]);
 

@@ -6,7 +6,7 @@ import f3 from "../../assets/footer/f3.png";
 
 const Footer = () => {
   return (
-    <div className=" text-white font-serif h-[40h] pt-8 pb-4">
+    <div className=" text-white font-serif pt-8">
       <div className="footer1 bg-lime-700 flex justify-evenly pt-5 pb-5">
         <div className="address space-y-2">
           <p>
@@ -53,22 +53,22 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer2 bg-white text-black flex font-serif pt-5 justify-evenly h-[10vh]">
+      <div className="footer2 bg-white text-black flex py-2 font-serif justify-evenly">
         <div className="flex">
-          <img src={f1} className="pr-2" />
-          <p>
+          <img src={f1} className="pr-2 h-10" />
+          <p className="text-sm">
             FREE SHIPPING ITEM <br /> Zero shipping expenses
           </p>
         </div>
         <div className="flex">
-          <img src={f2} className="pr-2" />
-          <p>
+          <img src={f2} className="pr-2 h-10" />
+          <p className="text-sm">
             SECURED PAYMENT <br /> Fully secured portal
           </p>
         </div>
         <div className="flex">
-          <img src={f3} className="pr-2" />
-          <p>
+          <img src={f3} className="pr-2 h-10" />
+          <p className="text-sm">
             MONEY BACK GUARANTEE <br /> Full refund policy
           </p>
         </div>

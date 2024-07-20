@@ -1,8 +1,9 @@
 import React from "react";
 import logo from "../../assets/logo/logo-3.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const loc = useLocation();
   return (
     <div className="w-full font-serif">
       <div className="m-0 p-0 box-border bg-lime-700">
@@ -39,16 +40,44 @@ const Navbar = () => {
       <div>
         <ul className="flex justify-evenly w-50 pt-8 pb-8 text-lime-800">
           <li className="w-5 hover:font-bold">
-            <Link to="/product">PRODUCT</Link>
+            <Link
+              to="/product"
+              className={
+                loc.pathname === "/product" ? "font-bold" : "text-lime-800"
+              }
+            >
+              PRODUCT
+            </Link>
           </li>
           <li className="w-5 hover:font-bold">
-            <Link to="/blogs">BLOGS</Link>
+            <Link
+              to="/blogs"
+              className={
+                loc.pathname === "/blogs" ? "font-bold" : "text-lime-800"
+              }
+            >
+              BLOGS
+            </Link>
           </li>
           <li className="nav-list w-5 hover:font-bold">
-            <Link to="/about">ABOUT</Link>
+            <Link
+              to="/about"
+              className={
+                loc.pathname === "/about" ? "font-bold" : "text-lime-800"
+              }
+            >
+              ABOUT
+            </Link>
           </li>
           <li className="w-5 hover:font-bold">
-            <Link to="/contact">CONTACT</Link>
+            <Link
+              to="/contact"
+              className={
+                loc.pathname === "/contact" ? "font-bold" : "text-lime-800"
+              }
+            >
+              CONTACT
+            </Link>
           </li>
         </ul>
       </div>
