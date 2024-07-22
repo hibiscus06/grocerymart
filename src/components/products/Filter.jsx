@@ -1,7 +1,6 @@
 import React from "react";
 
 const Filter = (props) => {
-  console.log(props.filter);
   return (
     <>
       <div className="mr-5">

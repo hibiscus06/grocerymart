@@ -21,13 +21,16 @@ const Navbar = () => {
               <img src={logo} />
             </Link>
           </div>
+
           <div className="w-1/6 flex flex-row justify-evenly">
-            <div>
-              <i
-                class="fa-solid fa-basket-shopping fa-2xl"
-                style={{ color: "#ffffff" }}
-              ></i>
-            </div>
+            <Link to="/cart">
+              <div>
+                <i
+                  class="fa-solid fa-basket-shopping fa-2xl"
+                  style={{ color: "#ffffff" }}
+                ></i>
+              </div>
+            </Link>
             <div>
               <i
                 class="fa-solid fa-user fa-2xl"

@@ -47,28 +47,6 @@ const Products = () => {
           <p className="ml-5 text-xl font-serif font-bold">You might need</p>
         </div>
 
-        {/* <div className="mr-5">
-          <button
-            onClick={() => handleFilter()}
-            className="flex flex-row justify-evenly outline-none items-center border text-white bg-lime-600 rounded w-20 h-8 cursor-pointer"
-          >
-            <p className="font-serif text-sm">Filter</p>
-            <i class="fa-solid fa-filter" style={{ color: "#ffffff" }}></i>
-          </button>
-          {filter ? (
-            <div>
-              <ul>
-                <li className="text-sm flex flex-row justify-evenly items-center border text-white bg-lime-600 rounded w-20 h-8 cursor-pointer">
-                  <button onClick={handleLowtoHigh}>Low to high</button>
-                </li>
-                <li className="text-sm flex flex-row justify-evenly items-center border text-white bg-lime-600 rounded w-20 h-8 cursor-pointer">
-                  <button onClick={handleHightoLow}>High to low</button>
-                </li>
-              </ul>
-            </div>
-          ) : null}
-        </div> */}
-
         <Filter
           handleLowtoHigh={handleLowtoHigh}
           handleHightoLow={handleHightoLow}
