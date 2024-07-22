@@ -3,6 +3,7 @@ import Slider from "./Slider";
 import Deals from "./Deals";
 import Partners from "./Partners";
 import Categories from "../products/Categories";
+import Bestsellers from "./Bestsellers";
 
 const Hero = () => {
   return (
@@ -10,6 +11,7 @@ const Hero = () => {
       <Slider />
       <Categories />
       <Deals />
+      <Bestsellers />
       <Partners />
     </div>
   );

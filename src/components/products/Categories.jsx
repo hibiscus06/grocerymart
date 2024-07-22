@@ -10,7 +10,7 @@ const Categories = () => {
   const loc = useLocation();
   return (
     <div className="flex flex-col space-y-5 m-5 font-serif">
-      <p className="text-center text-3xl text-lime-800 font-bold">Categories</p>
+      <p className="text-center text-4xl text-lime-800 font-bold">Categories</p>
       <div className="flex flex-row justify-evenly md:flex flex-row flex-wrap space-y-2">
         <Link
           to="/product/Fruit"
