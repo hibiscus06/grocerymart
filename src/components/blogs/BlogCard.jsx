@@ -19,7 +19,6 @@ const BlogCard = () => {
         </div>
       </div>
     </>
->>>>>>> 76792a7a92860790e1f7ff7e1cacc7461d355b6a
   );
 };
 
