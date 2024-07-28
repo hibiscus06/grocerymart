@@ -4,6 +4,7 @@ import Deals from "./Deals";
 import Partners from "./Partners";
 import Categories from "../products/Categories";
 import Bestsellers from "./Bestsellers";
+import BackToTop from "../backtotop/BackToTop";
 
 const Hero = () => {
   return (
@@ -13,6 +14,7 @@ const Hero = () => {
       <Deals />
       <Bestsellers />
       <Partners />
+      <BackToTop />
     </div>
   );
 };

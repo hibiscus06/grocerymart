@@ -11,11 +11,11 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <div className="text-center space-y-2 font-serif">
+      <div className="mt-5 text-center space-y-2 font-serif">
         <p className="text-4xl text-lime-900 font-bold">
           Welcome to FreshMart!
         </p>
-        <p className="text-lime-900 italic text-lg">
+        <p className="text-lime-900 italic text-xl">
           Where quality meets necessity
         </p>
 

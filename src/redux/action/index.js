@@ -32,3 +32,16 @@ export const totalItems = () => {
     type: ACTION_TYPE.TOTALITEMS,
   };
 };
+
+export const deleteItem = (value) => {
+  return {
+    type: ACTION_TYPE.DELETEITEM,
+    payload: value,
+  };
+};
+
+export const deleteCart = () => {
+  return {
+    type: ACTION_TYPE.DELETECART,
+  };
+};

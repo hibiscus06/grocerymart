@@ -23,8 +23,8 @@ const Bestsellers = () => {
           Bestsellers!
         </p>
       </div>
-      <div className="flex flex-wrap justify-evenly px-4">
-        {data.slice(0, 3).map((items, index) => {
+      <div className="flex mx-16 flex-wrap justify-evenly px-4">
+        {data.slice(0, 4).map((items, index) => {
           return <ProductCard props={items} />;
         })}
       </div>

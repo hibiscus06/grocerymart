@@ -9,7 +9,7 @@ import p6 from "../../assets/partners/partner-6.jpg";
 const Partners = () => {
   return (
     <div>
-      <p className="text-lime-900 font-bold text-4xl font-serif text-center">
+      <p className="text-lime-900 mt-5 font-bold text-4xl font-serif text-center">
         Our Partners
       </p>
       <div className="flex flex-row justify-center">

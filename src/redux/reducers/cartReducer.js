@@ -22,7 +22,6 @@ const cartReducer = (state = initialState, action) => {
       } else {
         state.productList.push({ ...action.payload, quantity: 1 });
       }
-      console.log("flag", flag);
       if (flag === true) {
         state.productList.push({ ...action.payload, quantity: 1 });
         flag = false;
@@ -81,6 +80,25 @@ const cartReducer = (state = initialState, action) => {
       return {
         ...state,
         totalItems: totalItems,
+      };
+
+    case ACTION_TYPE.DELETEITEM:
+      const update = state.productList.filter(
+        (item) => item.id !== action.payload
+      );
+
+      return {
+        ...state,
+        productList: update,
+        totalItem: update.length,
+      };
+
+    case ACTION_TYPE.DELETECART:
+      return {
+        ...state,
+        productList: [],
+        totalItem: 0,
+        totalPrice: 0.0,
       };
 
     default:

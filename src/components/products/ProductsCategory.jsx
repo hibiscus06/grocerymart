@@ -5,9 +5,11 @@ import Navbar from "../navbar/Navbar";
 import ProductCard from "./ProductCard";
 import Categories from "./Categories";
 import Footer from "../footer/Footer";
+import Filter from "./Filter";
 
 const ProductsCategory = () => {
   const { category } = useParams();
+  const [filter, setFilter] = useState(false);
   const [data, setData] = useState([]);
   const getData = async () => {
     let res = await fetch(baseUrl);
@@ -16,7 +18,24 @@ const ProductsCategory = () => {
       setData(result);
     }
   };
-  console.log("param", category);
+
+  const handleFilter = () => {
+    setFilter(!filter);
+    if (filter === false) getData();
+  };
+
+  const handleLowtoHigh = () => {
+    setFilter(!filter);
+    const sortedData = [...data].sort((a, b) => a.price - b.price);
+    setData(sortedData);
+  };
+
+  const handleHightoLow = () => {
+    setFilter(!filter);
+    const sortedData = [...data].sort((a, b) => b.price - a.price);
+    setData(sortedData);
+  };
+
   useEffect(() => {
     getData();
   }, []);
@@ -25,6 +44,18 @@ const ProductsCategory = () => {
     <>
       <Navbar />
       <Categories />
+      <div className="flex justify-between">
+        <div></div>
+        <div>
+          <Filter
+            handleLowtoHigh={handleLowtoHigh}
+            handleHightoLow={handleHightoLow}
+            handleFilter={handleFilter}
+            filter={filter}
+          />
+        </div>
+      </div>
+
       <div className="w-full flex flex-wrap justify-evenly px-4">
         {data
           ?.filter((item) => {

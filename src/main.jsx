@@ -11,6 +11,8 @@ import ProductsCategory from "./components/products/ProductsCategory.jsx";
 import Cart from "./components/cart/Cart.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
+import SearchCard from "./components/products/SearchCard.jsx";
+import BlogSingle from "./components/blogs/BlogSingle.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
   {
     path: "/cart",
     element: <Cart />,
+  },
+  {
+    path: "/search",
+    element: <SearchCard />,
+  },
+  {
+    path: "/singleBlogPage",
+    element: <BlogSingle />,
   },
 ]);
 

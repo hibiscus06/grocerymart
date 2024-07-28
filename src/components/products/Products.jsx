@@ -5,10 +5,12 @@ import Footer from "../footer/Footer";
 import Categories from "./Categories";
 import { baseUrl } from "../../config/config";
 import Filter from "./Filter";
+import BackToTop from "../backtotop/BackToTop";
 
 const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(false);
+
   const getData = async () => {
     let res = await fetch(baseUrl);
     let result = await res.json();
@@ -44,7 +46,9 @@ const Products = () => {
       <Categories />
       <div className="flex flex-row justify-between">
         <div>
-          <p className="ml-5 text-xl font-serif font-bold">You might need</p>
+          <p className="ml-5 text-xl text-lime-800 font-serif font-bold">
+            You might need
+          </p>
         </div>
 
         <Filter
@@ -59,6 +63,7 @@ const Products = () => {
           return <ProductCard props={items} />;
         })}
       </div>
+      <BackToTop />
       <Footer />
     </>
   );
