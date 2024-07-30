@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../navbar/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import CartCard from "./CartCard";
@@ -6,9 +6,18 @@ import Footer from "../footer/Footer";
 import img from "../../assets/delivery.png";
 import emptycart from "../../assets/emptycart.png";
 import { urlCreateOrder } from "../../config/config";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const data = useSelector((state) => state.cart);
+  const auth = localStorage.getItem("isAuth");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!auth) {
+      navigate("/login");
+    }
+  }, [auth, navigate]);
 
   const payment = (price) => {
     var price = price;

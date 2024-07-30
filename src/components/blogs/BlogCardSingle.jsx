@@ -26,7 +26,9 @@ const BlogCardSingle = () => {
                 What Ayurveda says about citrus fruits and their benefits
               </p>
               <p className="mt-5">{blogData.substring(0, 285) + "..."}</p>
-              <p className="text-lime-700 hover:text-yellow-600">Read more</p>
+              <p className="text-lime-700 hover:text-yellow-600 font-bold">
+                Read more
+              </p>
             </div>
           </div>
         </Link>

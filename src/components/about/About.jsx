@@ -19,11 +19,14 @@ const About = () => {
           Where quality meets necessity
         </p>
 
-        <p className="">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse atque
-          ex eligendi, veniam reiciendis aliquid accusamus <br />
-          quo iure iste placeat expedita aliquam. Itaque dolore dignissimos
-          dolor culpa exercitationem.
+        <p className="text-center">
+          FreshMart was founded with a vision to revolutionize the grocery
+          shopping experience. Our journey began with a passion for quality and
+          a dedication to community.
+          <br />
+          Over the years, we have grown from a small neighborhood store into a
+          trusted name in grocery retail, thanks to our loyal customers and
+          hardworking team.
         </p>
       </div>
 
@@ -37,8 +40,8 @@ const About = () => {
               <p className="font-bold">ALWAYS FRESH</p>
 
               <p className="text-sm text-lime-900">
-                Lorem ipsum dolor sit amet, consectetur elit, sed eiusmod tempor
-                incididunt dolor sit amet, consectetur elit, sed do eiusmod.
+                We prioritize freshness in everything we offer, ensuring that
+                you get only the best quality products.
               </p>
             </div>
           </div>
@@ -48,10 +51,10 @@ const About = () => {
               <img src={img3} className="" />
             </div>
             <div>
-              <p className="font-bold">ALWAYS FRESH</p>
+              <p className="font-bold">SUPER HEALTHY</p>
               <p className="text-sm text-lime-900">
-                Lorem ipsum dolor sit amet, consectetur elit, sed eiusmod tempor
-                incididunt dolor sit amet, consectetur elit, sed do eiusmod.
+                We support local farms and suppliers, bringing you products that
+                are not only fresh but also contribute to our community.
               </p>
             </div>
           </div>
@@ -65,10 +68,10 @@ const About = () => {
               <img src={img2} className="" />
             </div>
             <div>
-              <p className="font-bold">ALWAYS FRESH</p>
+              <p className="font-bold">100% NATURAL</p>
               <p className="text-sm text-lime-900">
-                Lorem ipsum dolor sit amet, consectetur elit, sed eiusmod tempor
-                incididunt dolor sit amet, consectetur elit, sed do eiusmod.
+                We are committed to environmentally-friendly practices, from
+                reducing waste to offering eco-friendly products.
               </p>
             </div>
           </div>
@@ -78,10 +81,10 @@ const About = () => {
               <img src={img4} className="" />
             </div>
             <div>
-              <p className="font-bold">ALWAYS FRESH</p>
+              <p className="font-bold">PREMIUM QUALITY</p>
               <p className="text-sm text-lime-900">
-                Lorem ipsum dolor sit amet, consectetur elit, sed eiusmod tempor
-                incididunt dolor sit amet, consectetur elit, sed do eiusmod.
+                Our friendly and knowledgeable staff are here to assist you with
+                any needs and make your shopping experience enjoyable.
               </p>
             </div>
           </div>

@@ -10,6 +10,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
+  const auth = localStorage.getItem("isAuth");
 
   useEffect(() => {
     dispatch(totalItems());
@@ -28,6 +29,11 @@ const Navbar = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate(`/search?query=${search}`);
+  };
+
+  const handleSignOut = () => {
+    localStorage.removeItem("isAuth");
+    navigate("/");
   };
 
   const loc = useLocation();
@@ -66,10 +72,20 @@ const Navbar = () => {
               </div>
             </Link>
             <div>
-              <i
-                class="fa-solid fa-user fa-2xl"
-                style={{ color: "#ffffff" }}
-              ></i>
+              {auth ? (
+                <button
+                  onClick={() => handleSignOut()}
+                  className="border-2 border-lime-100 rounded-md h-[4.5vh] w-[12vh] active:skew-x-3 "
+                >
+                  <p className="text-white text-lg text-center">Signout</p>
+                </button>
+              ) : (
+                <Link to="/login">
+                  <button className="border-2 border-lime-100 rounded-md h-[4.5vh] w-[10vh] active:skew-x-3">
+                    <p className="text-white text-lg text-center">Login</p>
+                  </button>
+                </Link>
+              )}
             </div>
           </div>
         </div>

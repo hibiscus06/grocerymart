@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "@material-tailwind/react";
-import slider1 from "../../assets/slider/s6.jpg";
+import slider1 from "../../assets/b2.jpg";
 import slider2 from "../../assets/slider/s2.jpg";
 import slider5 from "../../assets/slider/s5.jpg";
 import slider4 from "../../assets/slider/s4.jpg";
@@ -23,11 +23,17 @@ const Slider = () => {
         </div>
       )}
     >
-      <img
-        src={slider2}
-        alt="image 1"
-        className="h-[80vh] w-full object-cover"
-      />
+      <div>
+        <img
+          src={slider1}
+          alt="image 1"
+          className="h-[80vh] w-full aspect-video object-cover relative"
+        />
+        <p className="absolute top-[10vh] left-[10vh] text-lime-200 shadow-xl font-bold text-6xl font-serif italic">
+          Discover best quality products at FreshMart!
+        </p>
+      </div>
+
       <img
         src={slider4}
         alt="image 2"

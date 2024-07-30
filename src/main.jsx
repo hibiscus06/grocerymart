@@ -13,6 +13,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store.js";
 import SearchCard from "./components/products/SearchCard.jsx";
 import BlogSingle from "./components/blogs/BlogSingle.jsx";
+import Login from "./components/login/Login.jsx";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: "/singleBlogPage",
     element: <BlogSingle />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 

@@ -12,13 +12,28 @@ const Partners = () => {
       <p className="text-lime-900 mt-5 font-bold text-4xl font-serif text-center">
         Our Partners
       </p>
-      <div className="flex flex-row justify-center">
-        <img src={p1} />
-        <img src={p2} />
-        <img src={p3} />
-        <img src={p4} />
-        <img src={p5} />
-        <img src={p6} />
+
+      <div className="flex flex-row">
+        <div className="w-1/3"></div>
+
+        <div>
+          <marquee
+            direction="left"
+            width="80%"
+            scrollamount="18"
+            behavior="scroll"
+            className="flex flex-row"
+          >
+            <div className="flex w-1/2 justify-center ml-[30vh] ">
+              <img src={p1} />
+              <img src={p2} />
+              <img src={p3} />
+              <img src={p4} />
+              <img src={p5} />
+              <img src={p6} />
+            </div>
+          </marquee>
+        </div>
       </div>
     </div>
   );

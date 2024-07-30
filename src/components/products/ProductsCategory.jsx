@@ -56,7 +56,7 @@ const ProductsCategory = () => {
         </div>
       </div>
 
-      <div className="w-full flex flex-wrap justify-evenly px-4">
+      <div className="w-full flex flex-wrap justify-center">
         {data
           ?.filter((item) => {
             return item.category === category;

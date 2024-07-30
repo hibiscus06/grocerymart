@@ -45,3 +45,10 @@ export const deleteCart = () => {
     type: ACTION_TYPE.DELETECART,
   };
 };
+
+export const loginUser = (value) => {
+  return {
+    type: ACTION_TYPE.LOGIN,
+    payload: value,
+  };
+};
