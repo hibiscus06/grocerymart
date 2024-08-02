@@ -29,7 +29,7 @@ const Slider = () => {
           alt="image 1"
           className="h-[80vh] w-full aspect-video object-cover relative"
         />
-        <p className="absolute top-[10vh] left-[10vh] text-lime-200 shadow-xl font-bold text-6xl font-serif italic">
+        <p className="absolute top-[10vh] left-[10vh] text-white shadow-xl font-bold text-6xl font-serif italic">
           Discover best quality products at FreshMart!
         </p>
       </div>

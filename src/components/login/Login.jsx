@@ -48,7 +48,7 @@ const Login = () => {
       </div>
       <Navbar />
 
-      <div className="flex flex-col mt-[2vh] items-center justify-center font-serif">
+      <div className="flex flex-col mt-[2vh] items-center justify-center font-serif text-lime-800">
         <div className="p-10 border border-lime-800 rounded-xl w-[55vh] flex-row items-center bg-lime-800 text-white">
           <div className="flex flex-col items-center space-y-5">
             <img className="h-[7vh] w-[20vh]" src={logo} />
@@ -56,7 +56,7 @@ const Login = () => {
           </div>
 
           <form onSubmit={handleSubmit} className="p-5 space-y-5">
-            <div className="field">
+            <div className="field text-lime-800">
               <label htmlFor="email">
                 <p className="py-1">Email</p>
 

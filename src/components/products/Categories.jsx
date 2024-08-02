@@ -9,18 +9,18 @@ import { Link, useLocation } from "react-router-dom";
 const Categories = () => {
   const loc = useLocation();
   return (
-    <div className="flex flex-col space-y-5 m-5 font-serif">
+    <div className="flex flex-col space-y-5 m-5 font-serif text-lime-900">
       <p className="text-center text-4xl text-lime-800 font-bold">Categories</p>
-      <div className="flex flex-row justify-evenly md:flex flex-row flex-wrap space-y-2">
+      <div className="flex flex-row justify-evenly md:flex flex-wrap space-y-2">
         <Link
           to="/product/Fruit"
           className={
             loc.pathname === "/product/Fruit"
-              ? "font-bold shadow-lg border border-gray-100"
-              : ""
+              ? "font-bold shadow-lg border border-gray-100 hover:shadow-lg"
+              : "hover:shadow-lg"
           }
         >
-          <div className="w-40 flex flex-row items-center gap-2 shadow-sm cursor-pointer">
+          <div className="w-40 flex flex-row items-center gap-2 cursor-pointer">
             <img className="h-20" src={fruit} />
             <p className="text-lg">Fruits</p>
           </div>
@@ -30,8 +30,8 @@ const Categories = () => {
           to="/product/Vegetable"
           className={
             loc.pathname === "/product/Vegetable"
-              ? "font-bold shadow-lg border border-gray-100"
-              : ""
+              ? "font-bold shadow-lg border border-gray-100 hover:shadow-lg"
+              : "hover:shadow-lg"
           }
         >
           <div className="w-50 flex flex-row items-center gap-2 shadow-sm cursor-pointer">
@@ -44,8 +44,8 @@ const Categories = () => {
           to="/product/Meat"
           className={
             loc.pathname === "/product/Meat"
-              ? "font-bold shadow-lg border border-gray-100"
-              : ""
+              ? "font-bold shadow-lg border border-gray-100 hover:shadow-lg"
+              : "hover:shadow-lg"
           }
         >
           <div className="w-40 flex flex-row items-center gap-2 shadow-sm cursor-pointer">
@@ -58,8 +58,8 @@ const Categories = () => {
           to="/product/Bread"
           className={
             loc.pathname === "/product/Bread"
-              ? "font-bold shadow-lg border border-gray-100"
-              : ""
+              ? "font-bold shadow-lg border border-gray-100 hover:shadow-lg"
+              : "hover:shadow-lg"
           }
         >
           <div className="w-40 flex flex-row items-center gap-2 shadow-sm cursor-pointer">
@@ -72,8 +72,8 @@ const Categories = () => {
           to="/product/Dairy"
           className={
             loc.pathname === "/product/Dairy"
-              ? "font-bold shadow-lg border border-gray-100"
-              : ""
+              ? "font-bold shadow-lg border border-gray-100 hover:shadow-lg"
+              : "hover:shadow-lg"
           }
         >
           <div className="w-50 flex flex-row items-center gap-2 shadow-sm cursor-pointer">

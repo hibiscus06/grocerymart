@@ -18,12 +18,12 @@ const Bestsellers = () => {
 
   return (
     <>
-      <div className="text-center">
+      <div className="text-center px-[40vh]">
         <p className="font-serif text-4xl text-lime-900 font-bold">
           Bestsellers!
         </p>
       </div>
-      <div className="flex mx-16 flex-wrap justify-evenly px-4">
+      <div className="flex mx-14 flex-wrap justify-evenly pr-8">
         {data.slice(0, 4).map((items, index) => {
           return <ProductCard props={items} />;
         })}

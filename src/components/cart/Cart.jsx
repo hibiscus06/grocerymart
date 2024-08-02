@@ -1,15 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../navbar/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import CartCard from "./CartCard";
-import Footer from "../footer/Footer";
 import img from "../../assets/delivery.png";
 import emptycart from "../../assets/emptycart.png";
 import { urlCreateOrder } from "../../config/config";
 import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+import { deleteCart, totalItems, totalPrice } from "../../redux/action";
 
 const Cart = () => {
   const data = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
   const auth = localStorage.getItem("isAuth");
   const navigate = useNavigate();
 
@@ -17,23 +20,29 @@ const Cart = () => {
     if (!auth) {
       navigate("/login");
     }
-  }, [auth, navigate]);
+    if (paymentSuccess) {
+      dispatch(deleteCart());
+      dispatch(totalItems());
+      toast.success("Payment successful");
+    }
+  }, [auth, navigate, paymentSuccess]);
 
   const payment = (price) => {
     var price = price;
-    console.log("Payment started..", price);
     if (price == "") {
       alert("Add items to cart");
     }
 
     $.ajax({
       url: urlCreateOrder,
-      data: JSON.stringify({ amount: data.totalPrice, info: "request_info" }),
+      data: JSON.stringify({
+        amount: data.totalPrice + 50,
+        info: "request_info",
+      }),
       contentType: "application/json",
       type: "POST",
       dataType: "json",
       success: function (response) {
-        console.log("response", response);
         if (response.status == "created") {
           let options = {
             key: "rzp_test_uUUpZhisIywk8A",
@@ -47,7 +56,7 @@ const Cart = () => {
               console.log(response.razorpay_order_id);
               console.log(response.razorpay_signature);
               console.log("payment successfull !!");
-              alert("congrats!! Payment successful ");
+              setPaymentSuccess(true);
             },
             prefill: {
               name: "",
@@ -71,20 +80,21 @@ const Cart = () => {
             console.log(response.error.metadata.order_id);
             console.log(response.error.code);
             console.log(response.error.metadata.payment_id);
-            alert("Payment failed!");
           });
           rzp.open(); //form open
         }
       },
       error: function (error) {
         console.log("error", error);
-        alert("something went wrong!!");
       },
     });
   };
 
   return (
     <>
+      <div>
+        <Toaster />
+      </div>
       <Navbar />
       {data.totalItems == 0 ? (
         <div className=" flex flex-col items-center">
@@ -112,14 +122,15 @@ const Cart = () => {
                 </p>
                 <p className="m-1 pl-9">Total items : {data.totalItems}</p>
                 <p className="m-1 pl-9">Total price : ₹{data.totalPrice}</p>
-                <p className="m-1 pl-9">Shipping fee : ₹50</p>
-                <p className="m-1 pl-9 text-red-900">
-                  Total amount: ₹{data.totalPrice + 50}
+                <p className="m-1 pl-9">Shipping fee : ₹0</p>
+                <p className="m-1 pl-9">
+                  Total amount: ₹
+                  <span className="font-bold">{data.totalPrice}</span>
                 </p>
                 <div className="flex flex-row justify-center">
                   <button
-                    onClick={() => payment(data.totalPrice + 50)}
-                    className="border border-lime-600 bg-lime-800 m-1 mt-6 rounded-sm hover:scale-110"
+                    onClick={() => payment(data.totalPrice)}
+                    className="border border-lime-600 bg-lime-800 m-1 mt-6 rounded-sm hover:scale-110 "
                   >
                     <p className="text-white w-[15vh] h-[5vh] font-bold pt-1">
                       Checkout

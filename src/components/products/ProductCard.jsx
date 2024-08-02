@@ -37,7 +37,7 @@ const ProductCard = ({ props }) => {
           onClick={() => handleAddToCart(props)}
           className="text-white p-2 items-center bg-lime-700 rounded-md"
         >
-          Add to Cart
+          <p className="hover:text-sm">Add to Cart</p>
         </button>
       </div>
     </>

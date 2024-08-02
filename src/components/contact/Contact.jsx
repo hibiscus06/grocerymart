@@ -59,30 +59,6 @@ const Contact = () => {
 
         <div className="details my-5">
           <img className="h-[80vh]" src={c6} />
-          {/* <div className="flex flex-col justify-center items-center">
-            <div className="flex gap-3 items-center">
-              <i class="fa-solid fa-house" style={{ color: "" }}></i>
-              <p className="font-bold ">ADDRESS</p>
-            </div>
-            <p>123 Suspendis matti, VST District, </p>
-            <p>NY Accums, North America</p>
-          </div>
-          <div className="flex flex-col justify-center items-center">
-            <div className="flex items-center gap-3">
-              <i class="fa-solid fa-phone" style={{ color: "" }}></i>
-              <p className="font-bold">HOTLINE</p>
-            </div>
-            <p>
-              0123-456-78910 <br /> 0123-456-78910
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center">
-            <div className="flex items-center gap-3">
-              <i class="fa-solid fa-envelope" style={{ color: "" }}></i>
-              <p className="font-bold">MAIL SUPPORT</p>
-            </div>
-            <p>support@domain.com</p> support@domain.com
-          </div> */}
         </div>
       </div>
       <Footer />

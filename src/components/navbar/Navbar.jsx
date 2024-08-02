@@ -33,33 +33,34 @@ const Navbar = () => {
 
   const handleSignOut = () => {
     localStorage.removeItem("isAuth");
-    navigate("/");
+    navigate("/login");
   };
 
   const loc = useLocation();
   return (
     <div className="w-full font-serif sticky top-0 z-10 ">
-      <div className="m-0 p-0 box-border bg-lime-700">
+      <div className="m-0 p-0 box-border bg-lime-700 ">
         <div className="navbar p-7 flex justify-evenly items-center h-[10vh] ">
-          <div className="w-1/4">
+          <div className="logo flex flex-col items-center">
+            <Link to="/">
+              <img className="h-12" src={logo} />
+            </Link>
+          </div>
+
+          <div className="w-1/4 pl-28">
             <form onSubmit={handleSubmit}>
               <input
-                className="h-10 rounded-sm outline-none pl-4 focus:w-[30vh] focus:bg-lime-100"
+                className="h-10 w-96 rounded-sm outline-none pl-4  focus:bg-lime-100"
                 type="text"
                 name="search"
                 placeholder="Search Apples.."
                 onChange={handleSearch}
+                autoComplete={false}
               />
             </form>
           </div>
 
-          <div className="logo flex flex-col items-center">
-            <Link to="/">
-              <img className="h-10" src={logo} />
-            </Link>
-          </div>
-
-          <div className="w-1/4 flex flex-row justify-evenly">
+          <div className="w-1/4 flex flex-row justify-between pl-44">
             <Link to="/cart">
               <div className="relative">
                 <i
@@ -99,7 +100,7 @@ const Navbar = () => {
                 loc.pathname === "/product" ? "font-bold" : "text-lime-800"
               }
             >
-              PRODUCT
+              PRODUCTS
             </Link>
           </li>
           <li className="w-5 hover:font-bold">

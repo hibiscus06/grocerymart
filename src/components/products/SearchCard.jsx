@@ -23,8 +23,10 @@ const SearchCard = () => {
     getData();
   }, []);
 
-  const arr = data?.filter((item) => item.name === query);
-  console.log(arr);
+  const arr = data?.filter((item) =>
+    item.name.toLowerCase().startsWith(query.toLowerCase())
+  );
+  console.log(arr, data);
   return (
     <>
       <Navbar />
@@ -37,7 +39,7 @@ const SearchCard = () => {
           <img className="opacity-75 h-[75vh] w-[75vh]" src={img} />
         </div>
       ) : (
-        <div className="flex flex-col">
+        <div className="flex flex-row items-center justify-center">
           {arr.map((item) => {
             return <ProductCard props={item} />;
           })}
