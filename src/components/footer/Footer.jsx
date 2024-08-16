@@ -3,28 +3,13 @@ import logo from "../../assets/logo/logo-3.png";
 import f1 from "../../assets/footer/f1.png";
 import f2 from "../../assets/footer/f2.png";
 import f3 from "../../assets/footer/f3.png";
-import emailjs from "emailjs-com";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
   const handleChange = (e) => {
     setEmail(e.target.value);
   };
   const handleSubmit = () => {
     e.preventDefault();
-    emailjs
-      .send(
-        "service_9p25243", // Service ID from EmailJS
-        "your_template_id", // Template ID from EmailJS
-        { email: email }, // Parameters to send
-        "your_user_id" // User ID from EmailJS
-      )
-      .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
-      })
-      .catch((err) => {
-        console.error("FAILED...", err);
-      });
   };
 
   return (
